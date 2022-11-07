@@ -22,6 +22,10 @@ public class Hand {
         return true;
     }
 
+    public void emptyHand() {
+        cards.clear();
+    }
+
     public void printCurrentHand() {
         System.out.println("Your current hand is worth " + getHandValue() + " and has the following cards:");
 
