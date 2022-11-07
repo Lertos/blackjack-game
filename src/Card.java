@@ -1,8 +1,8 @@
 enum Suit {
-    SPADE,
-    CLUB,
-    HEART,
-    DIAMOND
+    Spade,
+    Club,
+    Heart,
+    Diamond
 }
 
 public class Card {
@@ -22,7 +22,7 @@ public class Card {
     }
 
     public int[] getValues() {
-        return this.values;
+        return values;
     }
 
     @Override
