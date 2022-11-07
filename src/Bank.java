@@ -1,8 +1,9 @@
 public class Bank {
 
     private int balance;
+
     public Bank(int balance) {
-        this.balance = balance;
+        balance = balance;
     }
 
     public int getBalance() {
@@ -10,12 +11,12 @@ public class Bank {
     }
 
     public void deposit(int cash) {
-        this.balance += cash;
+        balance += cash;
     }
 
     public boolean withdraw(int cash) {
         if (cash >= balance) {
-            this.balance -= cash;
+            balance -= cash;
             return true;
         }
         return false;
