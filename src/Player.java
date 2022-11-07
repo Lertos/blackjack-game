@@ -10,6 +10,19 @@ public class Player {
         this.name = name;
     }
 
+    public Bank getBank() {
+        return bank;
+    }
 
+    public Hand getHand() {
+        return hand;
+    }
 
+    public void emptyHand() {
+        hand.emptyHand();
+    }
+
+    public boolean addCardToHand(Card card) {
+        return hand.addCard(card);
+    }
 }
