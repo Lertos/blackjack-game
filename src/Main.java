@@ -19,41 +19,37 @@ public class Main {
             Deck deck = new Deck();
             deck.shuffleCards();
 
-            System.out.println("You currently have " + player.getBank().getBalance() + "$, and the house has " + house.getBank().getBalance() + "$.");
-            System.out.println("Please enter your initial bet: ");
+            Game game = new Game(deck, player, house);
 
-            String stringBet = scanner.nextLine();
-            int intBet;
+            int intBet = game.increaseBet();
 
-            try {
-                intBet = Integer.parseInt(stringBet);
-            } catch (NumberFormatException e) {
-                System.out.println("Your bet must be an integer above 0");
-                continue;
+            game.startRound(intBet);
+
+            int playerHandValue = player.getHand().getHandValue();
+            boolean playerFinished = false;
+
+            while (!playerFinished || playerHandValue < 21) {
+                //Player continues to pull cards
+                if (game.doesPlayerHit()) {
+                    game.dealCardToPlayer();
+                } else {
+                    playerFinished = true;
+                }
             }
 
-            //Check to make sure it's a valid bet; over 0
-            if (intBet <= 0) {
-                System.out.println("Your bet must be an integer above 0");
-                continue;
-            }
+            //Determine winnings and start a new game
+            int winnings;
+            //TODO: If ==21
+            winnings = (int) Math.round(game.getCurrentBet() * 1.5);
+            System.out.println("You got a perfect 21, you win 1.5x your bet, which is " + winnings + "$!");
 
-            System.out.println("You have placed a bet of " + intBet + "$");
+            //TODO: If >21
+            winnings = game.getCurrentBet() * -1;
+            System.out.println("You busted by going over 21 and have lost your money...");
 
-            //Deal the initial card to the player
-            Card card = deck.getRandomCard();
-            player.addCardToHand(card);
+            System.out.println("To quit type 'q', and to continue type anything else.");
 
-            System.out.println("You have been dealt a card: " + card.toString());
-
-            //Deal the initial card to the house
-            card = deck.getRandomCard();
-            house.addCardToHand(card);
-
-            System.out.println("The house has been dealt a card: " + card.toString());
-
+            response = scanner.nextLine();
         }
-
-
     }
 }

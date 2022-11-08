@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="83f7eb1c-d758-4877-8a4d-9f8ef35b1b5f" name="Changes" comment="Adding a game class to keep track of current bets and the hands">
+    <list default="true" id="83f7eb1c-d758-4877-8a4d-9f8ef35b1b5f" name="Changes" comment="Moving logic of checking hand value to the game class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Bank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Deck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -118,7 +117,35 @@
       <option name="project" value="LOCAL" />
       <updated>1667782389869</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Fixing a rookie mistake by not using &quot;this&quot; in a constructor">
+      <created>1667869457433</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1667869457433</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Renaming the createCards method to shuffleCards as it seems more appropriate">
+      <created>1667869493321</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1667869493321</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Setting up the start of the game loop">
+      <created>1667869530014</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1667869530014</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Moving logic of checking hand value to the game class">
+      <created>1667870792766</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1667870792766</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -144,6 +171,10 @@
     <MESSAGE value="Fixing inconsistent &quot;this&quot; use" />
     <MESSAGE value="Adding a deck class to maintain cards out of play" />
     <MESSAGE value="Adding a game class to keep track of current bets and the hands" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding a game class to keep track of current bets and the hands" />
+    <MESSAGE value="Fixing a rookie mistake by not using &quot;this&quot; in a constructor" />
+    <MESSAGE value="Renaming the createCards method to shuffleCards as it seems more appropriate" />
+    <MESSAGE value="Setting up the start of the game loop" />
+    <MESSAGE value="Moving logic of checking hand value to the game class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Moving logic of checking hand value to the game class" />
   </component>
 </project>

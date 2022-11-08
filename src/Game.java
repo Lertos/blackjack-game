@@ -1,32 +1,110 @@
+import java.util.Scanner;
+
 public class Game {
 
+    private Deck deck;
     private Player player;
     private House house;
     private int currentBet;
 
-    public Game(Player player, House house) {
+    public Game(Deck deck, Player player, House house) {
+        this.deck = deck;
         this.player = player;
         this.house = house;
         this.currentBet = 0;
     }
 
-    public boolean startRound(int betAmount) {
-        //Check if the player and the bank can handle the bet
-        if (player.getBank().getBalance() > betAmount || house.getBank().getBalance() > betAmount) {
-            System.out.println("The bet is too high, please make the bet smaller.");
-            return false;
+    public int getCurrentBet() {
+        return currentBet;
+    }
+
+    public int increaseBet() {
+        Scanner scanner = new Scanner(System.in);
+        boolean isValidBet = false;
+        int intBet = 0;
+
+        while (!isValidBet) {
+            System.out.println("You currently have " + player.getBank().getBalance() + "$, and the house has " + house.getBank().getBalance() + "$.");
+            System.out.println("Please enter your bet: ");
+
+            String stringBet = scanner.nextLine();
+
+            try {
+                intBet = Integer.parseInt(stringBet);
+            } catch (NumberFormatException e) {
+                System.out.println("Your bet must be an integer above 0");
+                continue;
+            }
+
+            //Check to make sure it's a valid bet; over 0
+            if (intBet <= 0) {
+                System.out.println("Your bet must be an integer above 0");
+                continue;
+            }
+
+            //Check to make sure both the player and the house can cover it
+            if (player.getBank().getBalance() > intBet || house.getBank().getBalance() > intBet) {
+                System.out.println("The bet is too high, please make the bet smaller.");
+                continue;
+            }
+
+            isValidBet = true;
         }
 
+        return intBet;
+    }
+
+    public void startRound(int betAmount) {
         //Accept the bet
         player.getBank().withdraw(betAmount);
         house.getBank().withdraw(betAmount);
 
         this.currentBet = betAmount;
 
-        //Deal the first card
+        //Deal the first card to each the player and the house
+        dealCardToPlayer();
+        dealCardToHouse(false);
 
+        //Deal the second card to each the player and the house
+        dealCardToPlayer();
+        dealCardToHouse(true);
+    }
 
-        return true;
+    public void dealCardToPlayer() {
+        //Deal a card to the player
+        Card card = deck.getRandomCard();
+        player.addCardToHand(card);
+
+        System.out.println("You have been dealt a card: " + card.toString());
+    }
+
+    public void dealCardToHouse(boolean cardFaceDown) {
+        //Deal a card to the house
+        Card card = deck.getRandomCard();
+        house.addCardToHand(card);
+
+        if (cardFaceDown) {
+            System.out.println("The house has been dealt an UNKNOWN card");
+        } else {
+            System.out.println("The house has been dealt a card: " + card.toString());
+        }
+    }
+
+    public boolean doesPlayerHit() {
+        Scanner scanner = new Scanner(System.in);
+        String response;
+
+        while (true) {
+            System.out.println("To hit type 'hit', and to stay type 'stay'");
+
+            response = scanner.nextLine();
+
+            if (response.equalsIgnoreCase("hit")) {
+                return true;
+            } else if (response.equalsIgnoreCase("stay")) {
+                return false;
+            }
+        }
     }
 
 }
