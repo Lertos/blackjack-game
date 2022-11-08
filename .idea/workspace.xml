@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="83f7eb1c-d758-4877-8a4d-9f8ef35b1b5f" name="Changes" comment="Finishing hand and card classes">
+    <list default="true" id="83f7eb1c-d758-4877-8a4d-9f8ef35b1b5f" name="Changes" comment="Adding a game class to keep track of current bets and the hands">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/House.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/House.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Bank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Deck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +76,49 @@
       <option name="project" value="LOCAL" />
       <updated>1667696173630</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Adding a method to empty a hand">
+      <created>1667780262707</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1667780262707</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Adding fields and constructor">
+      <created>1667780296865</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1667780296865</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Adding getters and hand methods">
+      <created>1667782234760</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1667782234760</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Fixing inconsistent &quot;this&quot; use and fixing suit names">
+      <created>1667782305517</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1667782305517</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Fixing inconsistent &quot;this&quot; use">
+      <created>1667782320462</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1667782320462</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Adding a game class to keep track of current bets and the hands">
+      <created>1667782389869</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1667782389869</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -95,6 +137,13 @@
     <MESSAGE value="Adding classes and initial setup" />
     <MESSAGE value="Finishing bank class" />
     <MESSAGE value="Finishing hand and card classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finishing hand and card classes" />
+    <MESSAGE value="Adding a method to empty a hand" />
+    <MESSAGE value="Adding fields and constructor" />
+    <MESSAGE value="Adding getters and hand methods" />
+    <MESSAGE value="Fixing inconsistent &quot;this&quot; use and fixing suit names" />
+    <MESSAGE value="Fixing inconsistent &quot;this&quot; use" />
+    <MESSAGE value="Adding a deck class to maintain cards out of play" />
+    <MESSAGE value="Adding a game class to keep track of current bets and the hands" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding a game class to keep track of current bets and the hands" />
   </component>
 </project>
