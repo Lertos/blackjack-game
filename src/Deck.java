@@ -12,7 +12,7 @@ public class Deck {
         this.allCards = new ArrayList<>();
     }
 
-    public void createCards() {
+    public void shuffleCards() {
         //First clear the deck
         allCards.clear();
 
