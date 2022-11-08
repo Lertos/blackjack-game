@@ -13,13 +13,8 @@ public class Hand {
         return cards;
     }
 
-    public boolean addCard(Card card) {
+    public void addCard(Card card) {
         cards.add(card);
-
-        if (getHandValue() > 21) {
-            return false;
-        }
-        return true;
     }
 
     public void emptyHand() {

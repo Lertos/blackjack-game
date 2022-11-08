@@ -22,7 +22,7 @@ public class Player {
         hand.emptyHand();
     }
 
-    public boolean addCardToHand(Card card) {
-        return hand.addCard(card);
+    public void addCardToHand(Card card) {
+        hand.addCard(card);
     }
 }
