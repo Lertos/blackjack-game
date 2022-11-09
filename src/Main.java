@@ -53,7 +53,7 @@ public class Main {
                 System.out.println("The house's UNKNOWN card was a " + house.getHand().getCards().get(1).toString());
 
                 //Continue to deal cards to the house if they need to
-                while (!houseFinished || houseHandValue < 21) {
+                while (!houseFinished && houseHandValue < 21) {
                     //House continues to pull cards
                     if (game.doesHouseHit()) {
                         game.dealCardToHouse(false);

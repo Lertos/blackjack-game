@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="83f7eb1c-d758-4877-8a4d-9f8ef35b1b5f" name="Changes" comment="Fixing some bugs and adding better output println's">
+    <list default="true" id="83f7eb1c-d758-4877-8a4d-9f8ef35b1b5f" name="Changes" comment="Removing player name. Isn't really used">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Deck.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667956698606</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Removing player name. Isn't really used">
+      <created>1667956747283</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1667956747283</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -207,6 +214,7 @@
     <MESSAGE value="Handling the dealing of cards and the win conditions" />
     <MESSAGE value="Fixing incorrect check for bet" />
     <MESSAGE value="Fixing some bugs and adding better output println's" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixing some bugs and adding better output println's" />
+    <MESSAGE value="Removing player name. Isn't really used" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removing player name. Isn't really used" />
   </component>
 </project>
