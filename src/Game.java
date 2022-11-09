@@ -61,6 +61,10 @@ public class Game {
 
         this.currentBet = betAmount;
 
+        //Removes any previous cards
+        player.getHand().emptyHand();
+        house.getHand().emptyHand();
+
         //Deal the first card to each the player and the house
         dealCardToPlayer();
         dealCardToHouse(false);
