@@ -13,7 +13,7 @@ public class Main {
         String response = "";
 
         //Start the main loop
-        while (response != "q") {
+        while (!response.equalsIgnoreCase("q")) {
             Deck deck = new Deck();
             deck.shuffleCards();
 
