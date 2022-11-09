@@ -15,7 +15,7 @@ public class Bank {
     }
 
     public boolean withdraw(int cash) {
-        if (cash >= balance) {
+        if (cash <= balance) {
             balance -= cash;
             return true;
         }
