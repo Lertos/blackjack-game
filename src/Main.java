@@ -15,6 +15,7 @@ public class Main {
 
         String response = "";
 
+        //Start the main loop
         while (response != "q") {
             Deck deck = new Deck();
             deck.shuffleCards();
@@ -23,31 +24,50 @@ public class Main {
 
             int intBet = game.increaseBet();
 
+            //Deal the initial two cards to the player and the house
             game.startRound(intBet);
 
+            //Get the value of the players hand after the initial deal
             int playerHandValue = player.getHand().getHandValue();
             boolean playerFinished = false;
 
+            //Continue to deal cards to the player if they want them
             while (!playerFinished || playerHandValue < 21) {
                 //Player continues to pull cards
                 if (game.doesPlayerHit()) {
                     game.dealCardToPlayer();
+                    playerHandValue = player.getHand().getHandValue();
                 } else {
                     playerFinished = true;
                 }
             }
 
-            //Determine winnings and start a new game
-            int winnings;
-            //TODO: If ==21
-            winnings = (int) Math.round(game.getCurrentBet() * 1.5);
-            System.out.println("You got a perfect 21, you win 1.5x your bet, which is " + winnings + "$!");
+            //Check if the player won perfectly or busted. If not continue
+            int houseHandValue = house.getHand().getHandValue();
 
-            //TODO: If >21
-            winnings = game.getCurrentBet() * -1;
-            System.out.println("You busted by going over 21 and have lost your money...");
+            if (playerHandValue < 21) {
+                //Now that the player is good with their cards, the house has to try to beat them
+                boolean houseFinished = false;
 
-            System.out.println("To quit type 'q', and to continue type anything else.");
+                System.out.println("The house' UNKNOWN card was a " + house.getHand().getCards().get(1).toString());
+
+                //Continue to deal cards to the house if they need to
+                while (!houseFinished || houseHandValue < 21) {
+                    //House continues to pull cards
+                    if (game.doesHouseHit(playerHandValue)) {
+                        game.dealCardToHouse(false);
+                        houseHandValue = house.getHand().getHandValue();
+                    } else {
+                        houseFinished = true;
+                    }
+                }
+            }
+
+            //Check who the winner is
+            int winnings = game.getWinnings(playerHandValue, houseHandValue);
+
+            //Handle the payouts and start a new game or quit
+            System.out.println("Type 'q' to quit, or anything else to continue.");
 
             response = scanner.nextLine();
         }

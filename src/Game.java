@@ -107,4 +107,33 @@ public class Game {
         }
     }
 
+    public boolean doesHouseHit(int playerHandValue) {
+        //If the value is 16 or under, they must take another card
+        if (playerHandValue <= 16) {
+            return true;
+        }
+        return false;
+    }
+
+    public int getWinnings(int playerHandValue, int houseHandValue) {
+        int winnings = currentBet;
+
+        if (playerHandValue == 21) {
+            winnings = (int) Math.round(currentBet * 1.5);
+            System.out.println("You got a perfect 21, you win 1.5x your bet, which is " + Math.abs(winnings) + "$!");
+        } else if (playerHandValue > 21) {
+            winnings *= -1;
+            System.out.println("You busted by going over 21 and have lost " + Math.abs(winnings) + "$");
+        } else if (playerHandValue == houseHandValue) {
+            winnings = 0;
+            System.out.println("You and the house tied with " + playerHandValue + " and no one wins!");
+        } else if (playerHandValue > houseHandValue) {
+            System.out.println("You beat the house with a score of " + playerHandValue + " (the house had " + houseHandValue + ") and won " + Math.abs(winnings) + "$!");
+        } else if (playerHandValue < houseHandValue) {
+            winnings *= -1;
+            System.out.println("The house beat you with a score of " + houseHandValue + " (you had " + playerHandValue + ") and lost " + Math.abs(winnings) + "$");
+        }
+
+        return winnings;
+    }
 }
