@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="83f7eb1c-d758-4877-8a4d-9f8ef35b1b5f" name="Changes" comment="Adding game logic to main loop">
+    <list default="true" id="83f7eb1c-d758-4877-8a4d-9f8ef35b1b5f" name="Changes" comment="Fixing incorrect check for bet">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
@@ -152,7 +152,21 @@
       <option name="project" value="LOCAL" />
       <updated>1667872951963</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Handling the dealing of cards and the win conditions">
+      <created>1667955680007</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1667955680007</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Fixing incorrect check for bet">
+      <created>1667955986380</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1667955986380</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -183,6 +197,8 @@
     <MESSAGE value="Setting up the start of the game loop" />
     <MESSAGE value="Moving logic of checking hand value to the game class" />
     <MESSAGE value="Adding game logic to main loop" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding game logic to main loop" />
+    <MESSAGE value="Handling the dealing of cards and the win conditions" />
+    <MESSAGE value="Fixing incorrect check for bet" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixing incorrect check for bet" />
   </component>
 </project>

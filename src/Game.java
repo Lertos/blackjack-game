@@ -65,6 +65,8 @@ public class Game {
         dealCardToPlayer();
         dealCardToHouse(false);
 
+        System.out.println("");
+
         //Deal the second card to each the player and the house
         dealCardToPlayer();
         dealCardToHouse(true);
@@ -107,9 +109,9 @@ public class Game {
         }
     }
 
-    public boolean doesHouseHit(int playerHandValue) {
+    public boolean doesHouseHit() {
         //If the value is 16 or under, they must take another card
-        if (playerHandValue <= 16) {
+        if (house.getHand().getHandValue() <= 16) {
             return true;
         }
         return false;
@@ -124,6 +126,8 @@ public class Game {
         } else if (playerHandValue > 21) {
             winnings *= -1;
             System.out.println("You busted by going over 21 and have lost " + Math.abs(winnings) + "$");
+        } else if (houseHandValue > 21) {
+            System.out.println("The house busted by going over 21 and you have won " + Math.abs(winnings) + "$!");
         } else if (playerHandValue == houseHandValue) {
             winnings = 0;
             System.out.println("You and the house tied with " + playerHandValue + " and no one wins!");

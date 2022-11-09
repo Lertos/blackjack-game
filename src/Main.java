@@ -27,16 +27,20 @@ public class Main {
             //Deal the initial two cards to the player and the house
             game.startRound(intBet);
 
+            System.out.println("\nYour hand value is currently: " + player.getHand().getHandValue());
+            System.out.println("The house's hand value is currently: " + house.getHand().getHandValue() + " and UNKNOWN card\n");
+
             //Get the value of the players hand after the initial deal
             int playerHandValue = player.getHand().getHandValue();
             boolean playerFinished = false;
 
             //Continue to deal cards to the player if they want them
-            while (!playerFinished || playerHandValue < 21) {
+            while (!playerFinished && playerHandValue < 21) {
                 //Player continues to pull cards
                 if (game.doesPlayerHit()) {
                     game.dealCardToPlayer();
                     playerHandValue = player.getHand().getHandValue();
+                    System.out.println("\nYour hand value is currently: " + player.getHand().getHandValue());
                 } else {
                     playerFinished = true;
                 }
@@ -49,14 +53,15 @@ public class Main {
                 //Now that the player is good with their cards, the house has to try to beat them
                 boolean houseFinished = false;
 
-                System.out.println("The house' UNKNOWN card was a " + house.getHand().getCards().get(1).toString());
+                System.out.println("The house's UNKNOWN card was a " + house.getHand().getCards().get(1).toString());
 
                 //Continue to deal cards to the house if they need to
                 while (!houseFinished || houseHandValue < 21) {
                     //House continues to pull cards
-                    if (game.doesHouseHit(playerHandValue)) {
+                    if (game.doesHouseHit()) {
                         game.dealCardToHouse(false);
                         houseHandValue = house.getHand().getHandValue();
+                        System.out.println("\nThe house's value is currently: " + house.getHand().getHandValue());
                     } else {
                         houseFinished = true;
                     }
@@ -67,7 +72,18 @@ public class Main {
             int winnings = game.getWinnings(playerHandValue, houseHandValue);
 
             //Handle the payouts and start a new game or quit
-            System.out.println("Type 'q' to quit, or anything else to continue.");
+            if (winnings > 0) {
+                player.getBank().deposit(Math.abs(winnings) + game.getCurrentBet());
+            } else if (winnings < 0) {
+                house.getBank().deposit(Math.abs(winnings) + game.getCurrentBet());
+            }
+
+            System.out.println("\n=================================");
+            System.out.println("The house currently has " + house.getBank().getBalance() + "$");
+            System.out.println("You currently have " + player.getBank().getBalance() + "$");
+            System.out.println("=================================");
+
+            System.out.println("\nType 'q' to quit, or anything else to continue.");
 
             response = scanner.nextLine();
         }
