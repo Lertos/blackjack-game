@@ -111,7 +111,7 @@ public class Game {
 
     public boolean doesHouseHit() {
         //If the value is 16 or under, they must take another card
-        if (house.getHand().getHandValue() <= 16) {
+        if (house.getHand().getHandValue(false) <= 16) {
             return true;
         }
         return false;

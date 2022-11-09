@@ -24,11 +24,11 @@ public class Main {
             //Deal the initial two cards to the player and the house
             game.startRound(intBet);
 
-            System.out.println("\nYour hand value is currently: " + player.getHand().getHandValue());
-            System.out.println("The house's hand value is currently: " + house.getHand().getHandValue() + " and UNKNOWN card\n");
+            System.out.println("\nYour hand value is currently: " + player.getHand().getHandValue(false));
+            System.out.println("The house's hand value is currently: " + house.getHand().getHandValue(true) + " and UNKNOWN card\n");
 
             //Get the value of the players hand after the initial deal
-            int playerHandValue = player.getHand().getHandValue();
+            int playerHandValue = player.getHand().getHandValue(false);
             boolean playerFinished = false;
 
             //Continue to deal cards to the player if they want them
@@ -36,15 +36,15 @@ public class Main {
                 //Player continues to pull cards
                 if (game.doesPlayerHit()) {
                     game.dealCardToPlayer();
-                    playerHandValue = player.getHand().getHandValue();
-                    System.out.println("\nYour hand value is currently: " + player.getHand().getHandValue());
+                    playerHandValue = player.getHand().getHandValue(false);
+                    System.out.println("\nYour hand value is currently: " + player.getHand().getHandValue(false));
                 } else {
                     playerFinished = true;
                 }
             }
 
             //Check if the player won perfectly or busted. If not continue
-            int houseHandValue = house.getHand().getHandValue();
+            int houseHandValue = house.getHand().getHandValue(false);
 
             if (playerHandValue < 21) {
                 //Now that the player is good with their cards, the house has to try to beat them
@@ -57,8 +57,8 @@ public class Main {
                     //House continues to pull cards
                     if (game.doesHouseHit()) {
                         game.dealCardToHouse(false);
-                        houseHandValue = house.getHand().getHandValue();
-                        System.out.println("\nThe house's value is currently: " + house.getHand().getHandValue());
+                        houseHandValue = house.getHand().getHandValue(false);
+                        System.out.println("\nThe house's value is currently: " + house.getHand().getHandValue(false));
                     } else {
                         houseFinished = true;
                     }

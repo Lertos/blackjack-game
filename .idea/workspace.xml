@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="83f7eb1c-d758-4877-8a4d-9f8ef35b1b5f" name="Changes" comment="Removing player name. Isn't really used">
+    <list default="true" id="83f7eb1c-d758-4877-8a4d-9f8ef35b1b5f" name="Changes" comment="Fixing infinite while loop issue">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Deck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -180,7 +181,21 @@
       <option name="project" value="LOCAL" />
       <updated>1667956747283</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Fixing bug where the value was 1 less as I fixed for loop but not the value">
+      <created>1667956960930</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1667956960930</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Fixing infinite while loop issue">
+      <created>1667956980149</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1667956980149</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -215,6 +230,8 @@
     <MESSAGE value="Fixing incorrect check for bet" />
     <MESSAGE value="Fixing some bugs and adding better output println's" />
     <MESSAGE value="Removing player name. Isn't really used" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removing player name. Isn't really used" />
+    <MESSAGE value="Fixing bug where the value was 1 less as I fixed for loop but not the value" />
+    <MESSAGE value="Fixing infinite while loop issue" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixing infinite while loop issue" />
   </component>
 </project>

@@ -3,7 +3,7 @@ import java.util.List;
 
 public class Hand {
 
-    private List<Card> cards;
+    private final List<Card> cards;
 
     public Hand() {
         this.cards = new ArrayList<>();
@@ -21,19 +21,15 @@ public class Hand {
         cards.clear();
     }
 
-    public void printCurrentHand() {
-        System.out.println("Your current hand is worth " + getHandValue() + " and has the following cards:");
-
-        for (Card card : cards) {
-            System.out.println(card.toString());
-        }
-    }
-
-    public int getHandValue() {
+    public int getHandValue(boolean hideAllButFirst) {
         int value = 0;
         int aceCount = 0;
+        int count = 0;
 
         for (Card card : cards) {
+            if (hideAllButFirst && count > 0)
+                break;
+
             int[] values = card.getValues();
 
             if (values.length == 2) {
@@ -42,6 +38,7 @@ public class Hand {
             } else {
                 value += values[0];
             }
+            count++;
         }
 
         //Turn aces into 1's if possible to get under 21
