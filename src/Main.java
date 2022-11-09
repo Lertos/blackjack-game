@@ -6,11 +6,8 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Welcome to the only blackjack table you'll ever need.");
-        System.out.println("Please enter your name: ");
 
-        String playerName = scanner.nextLine();
-
-        Player player = new Player(playerName, 100);
+        Player player = new Player(100);
         House house = new House(1000);
 
         String response = "";
