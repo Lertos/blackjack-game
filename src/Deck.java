@@ -24,7 +24,7 @@ public class Deck {
                 if (i == 0) {
                     newCard = new Card(new int[]{1, 11}, cardNames[i], suit);
                 } else {
-                    newCard = new Card(new int[]{i + 1}, cardNames[i], suit);
+                    newCard = new Card(new int[]{cardValues[i]}, cardNames[i], suit);
                 }
 
                 allCards.add(newCard);
