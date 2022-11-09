@@ -43,7 +43,7 @@ public class Game {
             }
 
             //Check to make sure both the player and the house can cover it
-            if (player.getBank().getBalance() > intBet || house.getBank().getBalance() > intBet) {
+            if (player.getBank().getBalance() < intBet || house.getBank().getBalance() < intBet) {
                 System.out.println("The bet is too high, please make the bet smaller.");
                 continue;
             }
