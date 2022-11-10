@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="83f7eb1c-d758-4877-8a4d-9f8ef35b1b5f" name="Changes" comment="Making the result messages smaller/more concise">
+    <list default="true" id="83f7eb1c-d758-4877-8a4d-9f8ef35b1b5f" name="Changes" comment="Fixing valid warnings">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/House.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/House.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668043780212</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Fixing valid warnings">
+      <created>1668043866440</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1668043866440</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -250,7 +257,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Adding a method to empty a hand" />
     <MESSAGE value="Adding fields and constructor" />
     <MESSAGE value="Adding getters and hand methods" />
     <MESSAGE value="Fixing inconsistent &quot;this&quot; use and fixing suit names" />
@@ -275,6 +281,7 @@
     <MESSAGE value="Fixing a bug where hands were not emptied for the next game" />
     <MESSAGE value="Fixing the missing equals check for quitting" />
     <MESSAGE value="Making the result messages smaller/more concise" />
-    <option name="LAST_COMMIT_MESSAGE" value="Making the result messages smaller/more concise" />
+    <MESSAGE value="Fixing valid warnings" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixing valid warnings" />
   </component>
 </project>
