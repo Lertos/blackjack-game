@@ -81,7 +81,7 @@ public class Game {
         Card card = deck.getRandomCard();
         player.addCardToHand(card);
 
-        System.out.println("You have been dealt a card: " + card.toString());
+        System.out.println("You were dealt a " + card.toString());
     }
 
     public void dealCardToHouse(boolean cardFaceDown) {
@@ -90,9 +90,9 @@ public class Game {
         house.addCardToHand(card);
 
         if (cardFaceDown) {
-            System.out.println("The house has been dealt an UNKNOWN card");
+            System.out.println("The house was dealt an UNKNOWN card");
         } else {
-            System.out.println("The house has been dealt a card: " + card.toString());
+            System.out.println("The house was dealt a " + card.toString());
         }
     }
 
@@ -126,12 +126,12 @@ public class Game {
 
         if (playerHandValue == 21) {
             winnings = (int) Math.round(currentBet * 1.5);
-            System.out.println("You got a perfect 21, you win 1.5x your bet, which is " + Math.abs(winnings) + "$!");
+            System.out.println("PERFECT 21! You win " + Math.abs(winnings) + "$! (1.5x your bet)");
         } else if (playerHandValue > 21) {
             winnings *= -1;
-            System.out.println("You busted by going over 21 and have lost " + Math.abs(winnings) + "$");
+            System.out.println("You busted and lost " + Math.abs(winnings) + "$");
         } else if (houseHandValue > 21) {
-            System.out.println("The house busted by going over 21 and you have won " + Math.abs(winnings) + "$!");
+            System.out.println("The house busted and you win " + Math.abs(winnings) + "$!");
         } else if (playerHandValue == houseHandValue) {
             winnings = 0;
             System.out.println("You and the house tied with " + playerHandValue + " and no one wins!");
