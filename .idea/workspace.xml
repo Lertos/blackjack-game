@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="83f7eb1c-d758-4877-8a4d-9f8ef35b1b5f" name="Changes" comment="Fixing the missing equals check for quitting">
+    <list default="true" id="83f7eb1c-d758-4877-8a4d-9f8ef35b1b5f" name="Changes" comment="Making the result messages smaller/more concise">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
     </list>
@@ -228,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667958333875</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Making the result messages smaller/more concise">
+      <created>1668043780212</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1668043780212</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -243,7 +250,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Finishing hand and card classes" />
     <MESSAGE value="Adding a method to empty a hand" />
     <MESSAGE value="Adding fields and constructor" />
     <MESSAGE value="Adding getters and hand methods" />
@@ -268,6 +274,7 @@
     <MESSAGE value="Fixing a bug where money wasn't getting withdrawn at the start of the game" />
     <MESSAGE value="Fixing a bug where hands were not emptied for the next game" />
     <MESSAGE value="Fixing the missing equals check for quitting" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixing the missing equals check for quitting" />
+    <MESSAGE value="Making the result messages smaller/more concise" />
+    <option name="LAST_COMMIT_MESSAGE" value="Making the result messages smaller/more concise" />
   </component>
 </project>

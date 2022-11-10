@@ -2,9 +2,9 @@ import java.util.Scanner;
 
 public class Game {
 
-    private Deck deck;
-    private Player player;
-    private House house;
+    private final Deck deck;
+    private final Player player;
+    private final House house;
     private int currentBet;
 
     public Game(Deck deck, Player player, House house) {
@@ -69,7 +69,7 @@ public class Game {
         dealCardToPlayer();
         dealCardToHouse(false);
 
-        System.out.println("");
+        System.out.println();
 
         //Deal the second card to each the player and the house
         dealCardToPlayer();
@@ -115,10 +115,7 @@ public class Game {
 
     public boolean doesHouseHit() {
         //If the value is 16 or under, they must take another card
-        if (house.getHand().getHandValue(false) <= 16) {
-            return true;
-        }
-        return false;
+        return house.getHand().getHandValue(false) <= 16;
     }
 
     public int getWinnings(int playerHandValue, int houseHandValue) {
@@ -137,7 +134,7 @@ public class Game {
             System.out.println("You and the house tied with " + playerHandValue + " and no one wins!");
         } else if (playerHandValue > houseHandValue) {
             System.out.println("You beat the house with a score of " + playerHandValue + " (the house had " + houseHandValue + ") and won " + Math.abs(winnings) + "$!");
-        } else if (playerHandValue < houseHandValue) {
+        } else {
             winnings *= -1;
             System.out.println("The house beat you with a score of " + houseHandValue + " (you had " + playerHandValue + ") and lost " + Math.abs(winnings) + "$");
         }
