@@ -1,7 +1,7 @@
 public class Player {
 
-    private Bank bank;
-    private Hand hand;
+    private final Bank bank;
+    private final Hand hand;
 
     public Player(int startingCash) {
         this.bank = new Bank(startingCash);
@@ -14,10 +14,6 @@ public class Player {
 
     public Hand getHand() {
         return hand;
-    }
-
-    public void emptyHand() {
-        hand.emptyHand();
     }
 
     public void addCardToHand(Card card) {
