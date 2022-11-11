@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
@@ -10,6 +11,10 @@ public class Deck {
 
     public Deck() {
         this.allCards = new ArrayList<>();
+    }
+
+    public List<Card> getAllCards() {
+        return Collections.unmodifiableList(allCards);
     }
 
     public void shuffleCards() {
