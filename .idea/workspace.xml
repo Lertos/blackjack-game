@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="83f7eb1c-d758-4877-8a4d-9f8ef35b1b5f" name="Changes" comment="Fixing final assignment">
+    <list default="true" id="83f7eb1c-d758-4877-8a4d-9f8ef35b1b5f" name="Changes" comment="Adding method to get a final list of cards">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blackjack-game.iml" beforeDir="false" afterPath="$PROJECT_DIR$/blackjack-game.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Deck.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +57,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.DeckTest">
     <configuration name="DeckTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="blackjack-game" />
       <option name="PACKAGE_NAME" value="" />
@@ -70,6 +68,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DeckTest.shuffleCards" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="blackjack-game" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DeckTest" />
+      <option name="METHOD_NAME" value="shuffleCards" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.DeckTest.shuffleCards" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -297,7 +310,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668043993854</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Adding method to get a final list of cards">
+      <created>1668210582556</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1668210582556</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -312,7 +332,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixing inconsistent &quot;this&quot; use and fixing suit names" />
     <MESSAGE value="Fixing inconsistent &quot;this&quot; use" />
     <MESSAGE value="Adding a deck class to maintain cards out of play" />
     <MESSAGE value="Adding a game class to keep track of current bets and the hands" />
@@ -337,6 +356,7 @@
     <MESSAGE value="Fixing valid warnings" />
     <MESSAGE value="Getting rid of unused method. Fixing final assignment" />
     <MESSAGE value="Fixing final assignment" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixing final assignment" />
+    <MESSAGE value="Adding method to get a final list of cards" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding method to get a final list of cards" />
   </component>
 </project>
